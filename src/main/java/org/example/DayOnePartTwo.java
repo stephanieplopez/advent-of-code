@@ -35,26 +35,33 @@ public class DayOnePartTwo {
         int b = 0;
         int c = 0;
         int combinedTotal = 0;
-        int previous = 0;
+        int d = 0;
         int previousTotal = 0;
 
         // Create an array to store combined values
         // Iterate through combinedValues list
 
-        for (int i = 0; i <= measurements.size() - 3; i++) {
-            previous = measurements.get(i);
-            a = measurements.get(i + 1);
-            b = measurements.get(i + 2);
-            c = measurements.get(i + 3);
-            previousTotal = previous + a + b;
-            combinedTotal = a + b + c;
+        for (int i = 0; i <= measurements.size() - 4; i++) {
+            a = measurements.get(i);
+            b = measurements.get(i + 1);
+            c = measurements.get(i + 2);
+            d = measurements.get(i + 3);
+            previousTotal = a + b + c;
+            combinedTotal = b + c + d;
 
-            if(i >= 1995) {
-                System.out.println(previousTotal = previous + a + b);
-                System.out.println(combinedTotal = a + b + c);
+            if(i >= 1990) {
+                System.out.println(a);
+                System.out.println(b);
+                System.out.println(c);
+                System.out.println(d);
+                System.out.println(previousTotal = a + b + c);
+                System.out.println(combinedTotal = b + c + d);
             }
             if(combinedTotal > previousTotal) {
                 count++;
+                if(count >= 1466) {
+                    System.out.println("count = " + count);
+                }
             }
 
         }
