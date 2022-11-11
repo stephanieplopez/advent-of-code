@@ -18,7 +18,7 @@ public class DayOne {
             BufferedReader objReader = null;
 
             //reads file in
-            objReader = new BufferedReader(new FileReader("/Users/jasonmann/IdeaProjects/advent-of-code/src/main/resources/input.txt"));
+            objReader = new BufferedReader(new FileReader("src/main/resources/input.txt"));
 
             while ((strCurrentLine = objReader.readLine()) != null) {
                 measurements.add(Integer.parseInt(strCurrentLine));
