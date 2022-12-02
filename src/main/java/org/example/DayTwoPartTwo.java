@@ -23,9 +23,6 @@ public class DayTwoPartTwo {
             String strCurrentLine;
             BufferedReader objReader = null;
 
-            //reads file in
-//            objReader = new BufferedReader(new FileReader("/Users/jasonmann/IdeaProjects/advent-of-code/src/main/resources/input.txt"));
-
             objReader = new BufferedReader(new FileReader("src/main/resources/input.txt"));
 
 
@@ -44,26 +41,24 @@ public class DayTwoPartTwo {
                     System.out.println("currentNumber = " + currentNumber);
                     System.out.println("horizontal = " + horizontal);
                     System.out.println("aim = " + aim);
-                    //System.out.println("depth = " + depth);
+                    depth += Integer.parseInt(currentNumber) * aim;
                 }
+
                 // If down, we will add to the depth
                 if(strCurrentLine.contains("down")) {
                     aim += Integer.parseInt(currentNumber);
                     System.out.println("currentNumber = " + currentNumber);
                     System.out.println("horizontal = " + horizontal);
                     System.out.println("aim = " + aim);
-                    //System.out.println("depth = " + depth);
                 }
+
                 // If up, we will subtract from the depth
                 if(strCurrentLine.contains("up")) {
                     aim -= Integer.parseInt(currentNumber);
                     System.out.println("currentNumber = " + currentNumber);
                     System.out.println("horizontal = " + horizontal);
                     System.out.println("aim = " + aim);
-                    //System.out.println("depth = " + depth);
                 }
-                depth += aim * horizontal;
-                System.out.println("depth after loop = " + depth);
 
             }
             // At end, multiply horizontal times depth
