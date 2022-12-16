@@ -36,20 +36,23 @@ public class DayThreePartOne {
         // most common to gamma rate
         // least common to epsilonRate
 
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < measurements.size(); i++) {
             number = measurements.get(i);
             System.out.println("Number: " + number);
 
-            for(int j = 0; i < number.length(); j++) {
-                if (number.indexOf(j) == 0) {
+            for(int j = 0; j < number.length(); j++) {
+                if (number.substring(j,j+1).equals("0")){
                     zeroCount++;
                 } else {
                     oneCount++;
                 }
+                System.out.println("Zero Count: " + zeroCount);
+                System.out.println("One Count: " + oneCount);
+                System.out.println("----------------");
             }
             /* 1. if zeroCount > oneCount then gammaRate is zero and
             epsilon rate is one for that index
-            2. Convert epilsonRate and gammaRate from binary to decimal
+            2. Convert epilsonRate 11001101 and gammaRate 00110010 from binary to decimal
             and multiply them together */
         }
 
