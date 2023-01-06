@@ -11,6 +11,7 @@ public class DayThreePartOne {
 
     public static void main(final String args[]) {
         List<String> measurements = new ArrayList<>();
+       // List<String> rows = new ArrayList<>();
 
         try {
             String strCurrentLine;
@@ -39,8 +40,14 @@ public class DayThreePartOne {
         for(int i = 0; i < measurements.size(); i++) {
             number = measurements.get(i);
             System.out.println("Number: " + number);
+//            if(number.substring(i,i+1).equals("0")) {
+//                zeroCount++;
+//            } else {
+//                oneCount++;
 
-            for(int j = 0; j < number.length(); j++) {
+            //Issue is that we can't get our loop to properly go to the next row at the correct index
+
+            for(int j = 0; j < measurements.size(); j++) {
                 if (number.substring(j,j+1).equals("0")){
                     zeroCount++;
                 } else {
